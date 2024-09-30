@@ -1,0 +1,27 @@
+#include <stdio.h>
+#define maks 5
+
+ main(){
+    int i;
+    float total=0, rata;
+    float nilai_tes[maks];
+
+    for (i=0; i<maks; i++){
+    printf("MASUKKAN NILAI TES KE %d= ",i+1);
+    scanf("%f",&nilai_tes[i]);
+    total+=nilai_tes[i];
+    }
+    rata= total/maks;
+    printf("RATA-RATANYA ADALAH %.2f\n",rata);
+
+    if(rata>= 85){
+        printf("GRADE KAMU ADALAH A\n");
+    }else if (rata >= 75 && rata< 85){
+        printf("GRADE KAMU ADALAH B\n");
+    }else if (rata >= 60 && rata < 75){
+        printf("GRADE KAMU ADALAH C\n");
+    }else {
+        printf("GRADE KAMU KURANG, KAMU HARUS MENGULANG BULAN DEPAN\n");
+    }
+        return 0;
+ }
