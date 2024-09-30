@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    float ipk;
+
+    printf("Masukkan IPK ANDA: ");
+    scanf("%f", &ipk);
+
+    if (ipk == 4.0) {
+        printf("IPK ANDA A\n");
+    } else if (ipk >= 3.3 && ipk < 4.0) {
+        printf("IPK ANDA B\n");
+    } else if (ipk >= 2.7 && ipk < 3.3) {
+        printf("IPK ANDA C\n");
+    } else if (ipk < 2.7) {
+        printf("IPK ANDA D\n");
+    } else {
+        printf("Nilai IPK tidak valid.\n");
+    }
+
+    printf("IPK ANDA ADALAH: %.2f\n", ipk);
+
+    return 0;
+}
