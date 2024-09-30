@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    unsigned long long faktorial = 1;
+
+    // Meminta pengguna memasukkan angka
+    printf("Masukkan bilangan bulat positif: ");
+    scanf("%d", &n);
+
+    // Jika pengguna memasukkan angka negatif
+    if (n < 0)
+        printf("Faktorial tidak terdefinisi untuk bilangan negatif.\n");
+    else {
+        for(i = 1; i <= n; ++i) {
+            faktorial *= i;  // faktorial = faktorial * i;
+        }
+        printf("Faktorial dari %d adalah: %llu\n", n, faktorial);
+    }
+
+    return 0;
+}
