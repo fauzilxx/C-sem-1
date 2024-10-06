@@ -1,0 +1,88 @@
+#include <stdio.h>
+int saldo= 50000;
+int pilihan;
+char lanjutkan;
+
+int main(){
+    printf(">>>>SELAMAT DATANG DI TOKO FAUZIL<<<<\n");
+    printf("SELAMAT BERBELANJA\n");
+
+    do {
+
+    printf("DAFTAR HARGA DAN BARANG\n");
+    printf("\t1. BUKU (Rp.3500)\n");
+    printf("\t2. PENSIL (Rp.2500)\n");
+    printf("\t3. BOLPOIN (Rp.3000)\n");
+    printf("\t4. PENGHAPUS (Rp.1000)\n");
+    printf("\t5. PENGGARIS (Rp.2500)\n");
+    printf("\t6. CEK SALDO\n");
+    printf("\t7. KELUAR\n");
+    printf("Pilihan Anda: ");
+    scanf("%d",&pilihan);
+
+    switch (pilihan){
+        case 1:
+        if (saldo >= 3500){
+            saldo -= 3500 ;
+            printf("ANDA BERHASIL MEMBELI BUKU, SISA SALDO ANDA %d\n",saldo);
+        }else {
+            printf("MAAF SALDO ANDA TIDAK CUKUP.\n");
+        }
+        break;
+
+        case 2:
+        if (saldo>=2500){
+            saldo-= 2500;
+            printf("ANDA BERHASIL MEMBELI PENSIL, SISA SALDO ANDA %d\n",saldo);
+        } else {
+            printf("MAAF SALDO ANDA TIDAK CUKUP.\n");
+        }
+        break;
+
+        case 3:
+        if( saldo>= 3000){
+            saldo -= 3000;
+            printf("ANDA BERHASIL MEMBELI BOLPOIN, SISA SALDO ANDA %d\n",saldo);
+        } else {
+            printf("MAAF SALDO ANDA TIDAK CUKUP\n");
+        }
+        break;
+
+        case 4:
+        if (saldo>= 1000){
+            saldo -= 1000;
+            printf("ANDA BERHASIL MEMBELI PENGHAPUS, SISA SALDO ANDA  %d\n");
+        } else {
+            printf("MAAF SALDO ANDA TIDAK CUKUP\n");
+        }
+        break;
+        
+        case 5: 
+        if (saldo >= 2500){
+            saldo-= 2500;
+            printf("ANDA BERHASIL MEMBELI PENGGARIS, SISA SALDO ANDA %d\n",saldo);
+        }else {
+            printf("MAAF SALDO ANDA TIDAK CUKUP.\n");
+        }
+        break;
+
+        case 6: 
+        printf("SALDO ANDA TERSISA %d\n",saldo);
+        break; 
+
+        case 7:
+        printf("TERIMA KASIH SUDAH BERBELANJA DI TOKO FAUZIL. SAMPAI BERTEMU KEMBALI!\n");
+        printf("SISA SALDO ANDA: %d\n",saldo);
+        return 0;
+        break;
+        
+        default:
+        printf("PILIHAN ANDA TIDAK VALID\n");
+    }
+     printf("Apakah Anda ingin melanjutkan? (y/x): ");
+     scanf(" %c", &lanjutkan);
+
+    }  while (lanjutkan == 'y' || lanjutkan == 'Y');
+
+    return 0;
+}
